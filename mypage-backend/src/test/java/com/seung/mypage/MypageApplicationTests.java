@@ -1,4 +1,4 @@
-package com.mypage.mypage;
+package com.seung.mypage;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

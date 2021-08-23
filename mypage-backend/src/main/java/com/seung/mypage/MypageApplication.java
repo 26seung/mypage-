@@ -1,4 +1,4 @@
-package com.mypage.mypage;
+package com.seung.mypage;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

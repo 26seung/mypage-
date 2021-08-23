@@ -1,4 +1,4 @@
-package com.mypage.mypage.domain;
+package com.seung.mypage.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
