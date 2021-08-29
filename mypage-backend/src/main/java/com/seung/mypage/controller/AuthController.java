@@ -1,5 +1,6 @@
 package com.seung.mypage.controller;
 
+import com.seung.mypage.annotation.Timer;
 import com.seung.mypage.domain.User;
 import com.seung.mypage.service.AuthService;
 import lombok.RequiredArgsConstructor;
@@ -26,5 +27,10 @@ public class AuthController {
     @GetMapping("/test")
     public void test(){
         System.out.println("test");
+    }
+    @Timer
+    @DeleteMapping("/delete")
+    public void delete() throws InterruptedException {
+        Thread.sleep(1000*2);
     }
 }
