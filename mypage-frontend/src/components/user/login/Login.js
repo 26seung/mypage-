@@ -1,11 +1,27 @@
-import * as React from 'react';
+import React, { useRef, useState } from 'react';
 import {Avatar,Button,CssBaseline,TextField,FormControlLabel,Checkbox,Link,Grid,Box,Typography,Container} from '@mui/material/';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import Copyright from '../modules/copyright';
+import Copyright from '../../../common/modules/copyright';
 
 
 
-const SignIn = () => {
+const Login = () => {
+
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState('');
+
+
+  const onChangeUsername = (e) => {
+    const username = e.target.value;
+    setUsername(username);
+  };
+  const onChangePassword = (e) => {
+    const password = e.target.value;
+    setPassword(password);
+  };
+  
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -41,7 +57,6 @@ const SignIn = () => {
               id="email"
               label="Email Address"
               name="email"
-              autoComplete="email"
               autoFocus
             />
             <TextField
@@ -52,7 +67,6 @@ const SignIn = () => {
               label="Password"
               type="password"
               id="password"
-              autoComplete="current-password"
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
@@ -74,7 +88,7 @@ const SignIn = () => {
               </Grid>
               <Grid item>
                 <Link href="/join" variant="body2">
-                  "아직 회원이 아니세요?"
+                  아직 회원이 아니세요?
                 </Link>
               </Grid>
             </Grid>
@@ -86,4 +100,4 @@ const SignIn = () => {
   );
 }
 
-export default SignIn;
+export default Login;
